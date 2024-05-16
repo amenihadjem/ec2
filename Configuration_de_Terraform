@@ -1,3 +1,4 @@
+
 etape1:
 Configuration de Terraform: Initialiser un nouveau projet Terraform et configurer le
 fournisseur AWS dans votre fichier de configuration Terraform:
@@ -8,3 +9,31 @@ cd ameni_hadjem_
 
 touch main.tf
 nano main.tf
+
+#main.tf
+variable "ameni" {
+  type = string
+   sensitive = true
+}
+provider "aws" {
+  region = "us-west-3"
+}
+resource "aws_s3_bucket" "ameni" {
+  bucket = var.ameni
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+output "ameni" {
+  value       =  aws_s3_bucket.ameni.bucket
+
+}
+
+*//
+terraform fmt
+terraform init
+terraform plan
+terraform apply
+terraform apply -auto-approve
