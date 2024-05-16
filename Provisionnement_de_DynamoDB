@@ -1,3 +1,9 @@
+sudo apt install git
+git init
+git add
+git push
+
+
 la configuration pour le fournisseur AWS, en spécifiant la région dans laquelle vous souhaitez créer la table DynamoDB.
 
 
