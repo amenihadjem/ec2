@@ -1,0 +1,10 @@
+etape1:
+Configuration de Terraform: Initialiser un nouveau projet Terraform et configurer le
+fournisseur AWS dans votre fichier de configuration Terraform:
+
+Creation d'un nouveau répertoire pour votre projet Terraform:
+mkdir ameni_hadjem
+cd ameni_hadjem
+
+touch main.tf
+nano main.tf
