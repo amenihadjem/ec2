@@ -1,0 +1,9 @@
+first, create a variable.tf file to difine all the variables.
+
+
+# variables.tf
+
+variable "ameni" {
+  type = string
+   sensitive = true
+}
