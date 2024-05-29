@@ -1,0 +1,36 @@
+Service : Amazon VPC (Virtual Private Cloud) vous permet de provisionner une 
+section isolée du Cloud AWS où vous pouvez lancer des ressources AWS dans un réseau virtuel que vous définissez.
+
+
+
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "ExampleVPC"
+  }
+}
+
+resource "aws_subnet" "example" {
+  vpc_id            = aws_vpc.example.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-west-2a"
+
+  tags = {
+    Name = "ExampleSubnet"
+  }
+}
+
+resource "aws_internet_gateway" "example" {
+  vpc_id = aws_vpc.example.id
+
+  tags = {
+    Name = "ExampleInternetGateway"
+  }
+}
+
+
+terraform init
+terraform plan
+terraform apply
+
