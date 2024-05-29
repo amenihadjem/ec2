@@ -10,7 +10,7 @@ cd ameni_hadjem_
 touch main.tf
 nano main.tf
 
-#main.tf
+
 variable "ameni" {
   type = string
    sensitive = true
