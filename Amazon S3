@@ -1,14 +1,13 @@
 Service: Amazon S3 (Simple Storage Service) est un service de stockage d'objets qui offre une scalabilité, 
 une disponibilité des données, une sécurité et des performances de premier ordre.
 
-# main.tf (ajout)
 
-resource "aws_s3_bucket" "example" {
-  bucket = "my-unique-bucket-name-123456"
-  acl    = "private"
+
+resource "aws_s3_bucket" "ameni" {
+  bucket = var.ameni
 
   tags = {
-    Name        = "MyBucket"
+    Name        = "My bucket"
     Environment = "Dev"
   }
 }
