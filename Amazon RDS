@@ -3,7 +3,7 @@ simplifie la configuration, l'exploitation et la scalabilité des bases de donn�
 Il prend en charge plusieurs moteurs de bases de données, y compris MySQL, PostgreSQL, MariaDB, Oracle, et SQL Server.
 
 
-resource "aws_db_instance" "my_rds" {
+resource "aws_db_instance" "my_rds_aaa" {
   allocated_storage    = 20
   engine               = "mysql"
   engine_version       = "8.0"
@@ -20,7 +20,7 @@ resource "aws_db_instance" "my_rds" {
 }
 
 output "rds_endpoint" {
-  value = aws_db_instance.my_rds.endpoint
+  value = aws_db_instance.my_rds_aaa.endpoint
 }
 
 
