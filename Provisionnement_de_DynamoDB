@@ -6,7 +6,7 @@ git push
 
 la configuration pour le fournisseur AWS, en spécifiant la région dans laquelle vous souhaitez créer la table DynamoDB.
 
-
+structure de répertoire pour organiser votre projet Terraform :
 terraform-aws-services/
 ├── main.tf
 ├── variables.tf
